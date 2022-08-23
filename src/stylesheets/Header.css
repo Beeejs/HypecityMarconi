@@ -1,0 +1,57 @@
+/* Kanit */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+
+
+/* Header Contianer */
+.header-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 100px;
+  font-family: 'Kanit', sans-serif;
+}
+
+
+
+/* Buscador */
+.buscador{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buscador input{
+  width: 220px;
+  height: 50px;
+  border:3px solid #111;
+  padding: 10px;
+  font-size: 14px;
+  font-family: 'Kanit', sans-serif;
+  outline: none;
+}
+
+.buscador .icon-search{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:70px;
+  height:50px;
+  color: #fff;
+  background-color: #111;
+}
+
+
+/* Logo */
+
+.logo img{
+  width: 300px;
+  height: 100%;
+}
+
+
+/* Info */
+
+.info-header{
+
+}

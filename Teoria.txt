@@ -1,0 +1,6 @@
+Un polyfill o polyfiller es un módulo de código más o menos extenso que hace que las funciones modernas de HTML, 
+CSS o JavaScript estén disponibles en navegadores antiguos que ya no son compatibles con estas.
+
+//WebPack ==> Agarra todos los archivos de nuestro proyecto y los empaqueta en pocos archivos staticos
+
+//Transpiling ==> Convertir codigo , para simplificarlo , extenderlo. jsx transpilado en js
