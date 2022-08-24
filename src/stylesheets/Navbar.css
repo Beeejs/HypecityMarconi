@@ -1,0 +1,34 @@
+/* Navbar Container */
+.navbar-container{
+  font-family: 'Kanit', sans-serif;
+  background-color: #111;
+  padding: 30px;
+}
+
+.navbar-container ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-container li{
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0 20px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.navbar-container a{
+  color: #fff;
+  text-decoration: none;
+}
+
+
+/* Cantidad Carrito */
+.cantidad-carrito{
+  font-size: 18px;
+  font-family: Roboto , sans-serif;
+  margin-left: 5px;
+}

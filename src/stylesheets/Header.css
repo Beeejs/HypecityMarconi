@@ -8,8 +8,9 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 100px;
+  gap: 150px;
   font-family: 'Kanit', sans-serif;
+  background-color: #fff;
 }
 
 
@@ -44,6 +45,7 @@
 
 /* Logo */
 
+
 .logo img{
   width: 300px;
   height: 100%;
@@ -53,5 +55,7 @@
 /* Info */
 
 .info-header{
-
+  font-size: 18px;
+  font-weight: 700;
+  color: #111;
 }

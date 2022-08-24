@@ -1,12 +1,12 @@
 import './App.css';
 import HeaderContent from './components/Header.jsx'
+import Navbar from './components/Navbar.jsx'
 
 function App() {
   return (
     <div className='App'>
-      <div className='header'>
         <HeaderContent/>
-      </div>
+        <Navbar/>
     </div>
   );
 }
