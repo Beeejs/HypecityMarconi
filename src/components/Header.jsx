@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import '../stylesheets/Header.css'
 import logo from '../img/hypecity-logo.jpeg';
 
@@ -29,4 +29,4 @@ function Header() {
   )
 }
 
-export default Header
+export default Header;

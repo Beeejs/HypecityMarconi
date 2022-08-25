@@ -1,7 +1,8 @@
-import React from 'react'
-import '../stylesheets/Navbar.css'
+import React from 'react';
+import '../stylesheets/Navbar.css';
 
 function Navbar(){
+
   return(
     <nav className='navbar-container'>
       <ul>
@@ -14,4 +15,4 @@ function Navbar(){
   );
 }
 
-export default Navbar
+export default Navbar;
