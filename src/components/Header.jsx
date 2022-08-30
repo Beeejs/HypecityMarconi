@@ -1,5 +1,5 @@
 import React from 'react';
-import '../stylesheets/Header.css'
+import '../stylesheets/Header.css';
 import logo from '../img/hypecity-logo.jpeg';
 
 

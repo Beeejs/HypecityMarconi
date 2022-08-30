@@ -1,4 +1,4 @@
-/* Kanit */
+/* Tipografia Kanit */
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
 
 
@@ -45,6 +45,11 @@
 
 /* Logo */
 
+.logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .logo img{
   width: 300px;
@@ -55,6 +60,9 @@
 /* Info */
 
 .info-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 18px;
   font-weight: 700;
   color: #111;
