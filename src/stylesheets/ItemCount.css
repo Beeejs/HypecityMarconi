@@ -1,0 +1,48 @@
+/* Tipografia Kanit */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+
+.contenedor-contador{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
+
+
+.numero-contador{
+  font-size: 20px;
+  font-weight: 900;
+  font-family: 'Kanit', sans-serif;
+  width: 150px;
+  text-align: center;
+}
+
+.contenedor-contador button{
+  width: 60px;
+  height: 35px;
+  background-color: transparent;
+  font-size: 20px;
+  font-weight: 900;
+  font-family: 'Kanit', sans-serif;
+  border: none;
+  cursor: pointer;
+}
+
+
+.contenedor-agregarAlCarrito{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.contenedor-agregarAlCarrito button{
+  width: 200px;
+  height: 35px;
+  background-color: #fff;
+  font-size: 20px;
+  font-weight: 900;
+  font-family: 'Kanit', sans-serif;
+  border: none;
+  cursor: pointer;
+}

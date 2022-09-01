@@ -1,11 +1,17 @@
-.desafio-clase-4{
+.contenedor-principal{
   display: flex; 
   justify-content: center;
   align-items: center;
 }
 
-.desafio-clase-4 h1{
+.contenedor-principal h1{
   font-size: 30px;
   text-transform: uppercase;
   font-family: Roboto , sans-serif;
+}
+
+.contenedor-btnadd{
+  display: grid;
+  justify-content: center;
+  align-items: center;
 }
