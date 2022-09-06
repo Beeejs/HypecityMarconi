@@ -1,0 +1,31 @@
+/* Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+a{
+  text-decoration: none;
+  color: #111;
+}
+
+.productos{
+  text-align: center;
+  color: #111;
+  font-family:'Poppins', sans-serif;
+}
+
+.name{
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.price{
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.img-prod{
+  margin-top: 25px;
+}
+
+.img-prod img{
+ width: 300px
+}

@@ -1,23 +1,50 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { dataItem } from '../data';
 import '../stylesheets/ItemListContainer.css'
-import ItemCount from './ItemCount.jsx';
+import Presentacion from '../img/presentacion-prod.jpeg'
+import Item from './Item';
 
-function ItemListContainer({greeting}) {
+function ItemListContainer() {
 
-  const agregarAlCarrtito = (cantidad) =>{
-    alert(`Se agrego al carrito ${cantidad} productos!`)
-  }
+  const [items , setItems] = useState([])
+
+  useEffect(()=>{
+
+    (async()=>{
+      const promesa = new Promise((res , rej) =>{
+        setTimeout(()=>{
+          res(dataItem);
+        },2000)
+        
+      })
+  
+      try {
+        const res = await promesa;
+        setItems(res);
+      } 
+      catch (err) {
+        console.log(err);
+      }
+  
+    })()
+
+  },[])
+
+
 
   return (
-    <>
-      <div className='contenedor-principal'>
-        <h1>{greeting}</h1>
+    <div className='section-productos'>
+        <div className='container-img-prod'>
+            <img src={Presentacion} alt='Imagen Presentacion Productos' />
+        </div>
+      <div className='container-productos'>
+        {
+          items.map(item => {
+            return <Item key={item.id} products={item}/>
+          })
+        }
       </div>
-
-      <div className='contenedor-btnadd'>
-        <ItemCount stock={8} initial={1} onAdd={agregarAlCarrtito}/>
-      </div>
-    </>
+    </div>
   );
 }
 

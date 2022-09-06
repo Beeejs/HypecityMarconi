@@ -24,3 +24,15 @@
   color: #fff;
   text-decoration: none;
 }
+
+/* Carrtio */
+.cantidad-carrito{
+  font-size: 18px;
+  font-weight: 600;
+  font-family: Roboto , sans-serif;
+  margin-left: 5px;
+}
+  
+.fa-cart-shopping{
+  font-size: 18px;
+}

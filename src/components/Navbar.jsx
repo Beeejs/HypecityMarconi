@@ -1,6 +1,5 @@
 import React from 'react';
 import '../stylesheets/Navbar.css';
-import CartWidget from './CartWidget.jsx';
 
 function Navbar(){
 
@@ -10,7 +9,7 @@ function Navbar(){
         <li><a href='#Inicio'>Inicio</a></li>
         <li><a href='#Productos'>Productos</a></li>
         <li><a href='#Contacto'>Contacto</a></li>
-        <CartWidget/>
+        <li><i className='fa-solid fa-cart-shopping'></i><span className='cantidad-carrito'>0</span></li>
       </ul>
     </nav>
   );

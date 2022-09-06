@@ -1,17 +1,21 @@
-.contenedor-principal{
-  display: flex; 
+.section-productos{
+  background-color: #fff;
+}
+
+.container-img-prod{
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.contenedor-principal h1{
-  font-size: 30px;
-  text-transform: uppercase;
-  font-family: Roboto , sans-serif;
+.container-img-prod img{
+  width: 100%;
+  height: 100%;
 }
 
-.contenedor-btnadd{
+.container-productos{
   display: grid;
+  flex-wrap:wrap;
   justify-content: center;
   align-items: center;
 }
