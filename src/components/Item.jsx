@@ -3,7 +3,7 @@ import '../stylesheets/Item.css'
 import ItemCount from './ItemCount'
 
 function Item({products}) {
-  const {name , price , img } = products
+  const {name , price , img} = products
 
   const agregarAlCarrtito = (cantidad) =>{
     alert(`Se agrego al carrito ${cantidad} productos!`)

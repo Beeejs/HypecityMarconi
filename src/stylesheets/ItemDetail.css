@@ -1,0 +1,57 @@
+/* Tipografia Kanit */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+
+.container-crypto-principal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; 
+  margin-top: 20px;
+}
+
+.container-crypto{
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 5px solid #b2b1b1cd;
+  margin: 10px 30px;
+}
+
+
+.crypto-detalles{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Kanit', sans-serif;
+}
+
+strong{
+  font-size: 18px;
+  font-weight: 900;
+  color:#4d4d4dde ;
+}
+
+
+h1{
+  font-size: 20px;
+  margin: 0 10px;
+}
+
+h2{
+  font-size: 15px;
+  margin: 0 0px;
+  color: #b2b1b1cd;
+}
+
+h3{
+  font-size: 18px;
+  font-family: 'Kanit', sans-serif;
+  margin: 0 50px;
+}
+
+img{
+  width: 50px;
+  height: auto;
+}
