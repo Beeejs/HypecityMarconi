@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
 
 .contenedor-contador{
+  width: 500px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10,7 +11,7 @@
 
 
 .numero-contador{
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 900;
   font-family: 'Kanit', sans-serif;
   width: 150px;
@@ -20,7 +21,7 @@
 
 .contenedor-contador button{
   width: 60px;
-  height: 35px;
+  height: 40px;
   font-size: 20px;
   font-weight: 900;
   font-family: 'Kanit', sans-serif;
@@ -39,13 +40,24 @@
 }
 
 .contenedor-agregarAlCarrito button{
-  width: 200px;
-  height: 35px;
+  width: 500px;
+  height: 50px;
   background-color: #111;
   font-size: 20px;
-  font-weight: 900;
+  font-weight: 500;
   color: #fff;
   font-family: 'Kanit', sans-serif;
   border: none;
   cursor: pointer;
+}
+
+
+/* MediaQ */
+@media (max-width:1225px){
+  .contenedor-agregarAlCarrito button{
+    width: 100%;
+  }
+  .contenedor-contador{
+    width: 100%;
+  }
 }

@@ -7,17 +7,22 @@ a{
 }
 
 .productos{
+  width: 100%;
   text-align: center;
   color: #111;
   font-family:'Poppins', sans-serif;
+  padding-left: 0px;
+  cursor: pointer;
 }
 
 .name{
+  width: 100%;
   font-size: 18px;
   font-weight: 500;
 }
 
 .price{
+  width: 100%;
   font-size: 20px;
   font-weight: 900;
 }
@@ -27,5 +32,15 @@ a{
 }
 
 .img-prod img{
- width: 300px
+  width: 280px
+}
+
+
+/* MediaQ */
+
+@media (max-width: 620px){
+  .img-prod img{
+  width: 100%
+  }
+   
 }

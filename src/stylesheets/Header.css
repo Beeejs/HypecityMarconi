@@ -67,3 +67,43 @@
   font-weight: 700;
   color: #111;
 }
+
+
+/* MediaQ */
+@media (max-width:1225px){
+
+  .header-container{
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .buscador{
+    margin-bottom: 50px;
+  }
+
+  .buscador input{
+    width: 450px;
+  }
+  .info-header{
+    margin-bottom: 40px;
+  }
+  .logo{
+    order: 0;
+  }
+
+  .buscador{
+    order: 1;
+  }
+
+  .info-header{
+    order: 2;
+  }
+  
+}
+
+
+@media (max-width:520px){
+  .buscador input{
+    width: 240px;
+  }
+}

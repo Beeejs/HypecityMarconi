@@ -1,0 +1,15 @@
+/* Container */
+.container-li-category{
+  padding: 30px 100px;
+}
+
+li{
+  font-family: 'Kanit' , sans-serif;
+  font-weight: 500;
+  margin: 0 3px;
+}
+
+.nav-inicio::after{
+  content: '/';
+  margin: 0 25px;
+}

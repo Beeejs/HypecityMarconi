@@ -15,7 +15,36 @@
 
 .container-productos{
   display: grid;
-  flex-wrap:wrap;
-  justify-content: center;
-  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+  margin: 0 250px;
+}
+
+/* Loading */
+
+.loading{
+  width: 100%;
+  font-size: 50px;
+  font-family: 'Kanit' , sans-serif;
+  color: #000;
+}
+
+
+
+/* MediaQ */
+@media (max-width: 1420px){
+  .container-productos{
+    margin: 0 120px;
+  }
+}
+
+@media (max-width: 1160px){
+  .container-productos{
+    margin: 0 0px;
+  }
+}
+
+@media (max-width: 620px){
+  .container-productos{
+    grid-template-columns: repeat(2,1fr);
+  }
 }

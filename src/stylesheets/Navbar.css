@@ -1,8 +1,8 @@
 /* Navbar Container */
 .navbar-container{
   font-family: 'Kanit', sans-serif;
-  background-color: #111;
-  padding: 30px;
+  background-color: #000;
+  padding: 15px;
 }
 
 .navbar-container ul{
@@ -12,7 +12,8 @@
 }
 
 .navbar-container li{
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: 500;
   text-transform: uppercase;
   color: #fff;
   margin: 0 20px;
@@ -25,6 +26,41 @@
   text-decoration: none;
 }
 
+
+/* Hover Categorys */
+
+.nav-categorys{
+  display: none !important;
+  transition: all .3s ease;
+  text-align: left;
+}
+
+.nav-categorys li{
+  width: 100%;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 10px 150px 10px 10px;
+  margin: 0;
+  list-style: none;
+  cursor: pointer;
+}
+
+.nav-categorys li:hover{
+  background-color: #222;
+}
+
+.list-products i{
+  margin-left:10px;
+}
+
+.list-products:hover .nav-categorys{
+  position: absolute;
+  display: block !important;
+  background-color: #000;
+}
+
 /* Carrtio */
 .cantidad-carrito{
   font-size: 18px;
@@ -35,4 +71,27 @@
   
 .fa-cart-shopping{
   font-size: 18px;
+}
+
+
+
+/* MediaQ */
+@media (max-width:768px){
+  
+  .navbar-container ul{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .navbar-container{
+    display: none;
+  }
+
+  .navbar{
+    display: block!important;
+    position: sticky!important;
+    background-color: #111!important;
+  }
+
+
 }

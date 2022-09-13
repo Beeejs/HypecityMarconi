@@ -1,34 +1,18 @@
-import { React , useEffect , useState} from 'react';
-import ItemDetail from './ItemDetail';
+import { React } from 'react';
+import { useParams } from 'react-router-dom';
+import { dataItem } from '../data.jsx';
+import ItemDetail from './ItemDetail.jsx';
 
 function ItemDetailContainer(){
 
-  const [crypto , setCrypto] = useState([])
+  const params = useParams()
+  const {productId} = params
 
-  useEffect(()=>{
-    const apiKey = 'd1f85c753fba4fd13032619615dba81638a48227'
-    const url = `https://api.nomics.com/v1/currencies/ticker?key=${apiKey}&ids=BTC,ETH,USDT&interval=1d` /* Pasar como parametro el prodID*/
-    const promesa = async () =>{
-      
-      await fetch(url)
-        .then(res => res.json())
-        .then(moneda => setCrypto(moneda))
-    }
-
-    promesa()
-  },[]) /* Cambiar las dependencias , porque el prodId cambia */
-
-
+  let item = []
+  dataItem.filter(res => res.id === parseInt(productId) ? item = res : null)
   
-
   return(
-    <div className='container-crypto-principal'>
-      {
-        crypto.map(item => {
-          return <ItemDetail key={item.id} crypto={item}/>
-        })
-      }
-    </div>
+    <ItemDetail key={item.id} item={item}/>
   );
 }
 

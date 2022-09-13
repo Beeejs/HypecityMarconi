@@ -1,57 +1,263 @@
 /* Tipografia Kanit */
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap');
 
-.container-crypto-principal{
+.contenedor-detalles{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 100px 0;
+}
+
+/* Ul detalles */
+ul{
+  display: flex;
+  list-style: none;
+}
+
+li{
+  font-family: 'Kanit' , sans-serif;
+  font-weight: 500;
+  margin: 0 3px;
+}
+
+.li-inicio::after{
+  content: '/';
+  margin: 0 5px;
+}
+.li-category::after{
+  content: '/';
+  margin: 0 5px;
+}
+
+.li-name{
+  text-transform: uppercase;
+}
+
+
+
+/* Detalles Img */
+
+
+.img-principal-container{
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap; 
-  margin-top: 20px;
 }
 
-.container-crypto{
+.img-principal{
+  width: 450px;
+}
+
+.img-detalles{
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.img-detalles img{
+  width: 81px;
+  height: 81px;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+/* Si no tiene imgDettale */
+.img-none-detalle{
+  display: none;
+}
+
+
+/* Info producto */
+
+.info-detalles-pirncipal{
+  padding-left: 70px;
+}
+
+.info-detalles-container{
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.info-detalles-container h1{
+  font-size: 40px;
+  text-transform: uppercase;
+  font-family: Roboto , sans-serif;
+  font-weight: 500;
+  margin: 30px 0  20px;
+}
+
+.info-detalles-container h3{
+  font-size: 25px;
+  text-transform: uppercase;
+  font-family: 'Kanit' , sans-serif;
+  font-weight: bolder;
+}
+
+.info-detalles-container span{
+  font-size: 16px;
+  font-family: 'Kanit' , sans-serif;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+
+/* Parrafo Info */
+
+.info-producto{
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  text-align: left;
+  width: 600px;
+  overflow-wrap: anywhere;
+  margin-top: 50px;
+}
+
+.info-producto h2{
+  font-size: 30px;
+  font-family: 'Kanit' , sans-serif;
+  font-weight: 400;
+  margin-top: 10px;
+  color: red;
+}
+
+.info-producto p{
+  font-size: 16px;
+  font-family: 'Kanit' , sans-serif;
+  font-weight: 400;
+}
+
+
+
+
+/* Detalle de compra */
+
+.info-compra-cliente{
+  display: grid;
+  margin-top: 55px;
+}
+
+.info-compra-cliente label{
+  font-size: 14px;
+  font-family: 'Kanit' , sans-serif;
+  font-weight: 200;
+}
+
+.info-compra-cliente select{
   width: 100%;
-  height: 100px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  border: 5px solid #b2b1b1cd;
-  margin: 10px 30px;
+  max-width: 40%;
+  height: 50px;
+  text-align: left;
+  font-size: 16px;
+  font-family: 'Kanit' , sans-serif;
+  font-weight: 400;
+  border: 1px solid #d2d2d2da;
+}
+
+.info-compra-cliente select::selection{
+  background: #39f;
+  text-shadow: none;
+}
+
+.info-compra-cliente select:focus{
+  outline: none;
 }
 
 
-.crypto-detalles{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Kanit', sans-serif;
-}
-
-strong{
-  font-size: 18px;
-  font-weight: 900;
-  color:#4d4d4dde ;
-}
-
-
-h1{
-  font-size: 20px;
-  margin: 0 10px;
-}
-
-h2{
+.info-compra-cliente option{
   font-size: 15px;
-  margin: 0 0px;
-  color: #b2b1b1cd;
+  font-family: 'Kanit' , sans-serif;
+  font-weight: 400;
+  border: 1px solid #d2d2d2da;
 }
 
-h3{
-  font-size: 18px;
-  font-family: 'Kanit', sans-serif;
-  margin: 0 50px;
+
+/* Container cantodad y btn compra */
+.container-cantidad-compra{
+  margin-top: 50px;
+  width: fit-content;
 }
 
-img{
-  width: 50px;
-  height: auto;
+
+
+/* MediaQ */
+@media (max-width:1300px){
+  .info-detalles-pirncipal{
+    padding-left: 0px;
+  }
+}
+
+@media (max-width:1226px){
+  .contenedor-detalles{
+    display: block;
+    padding: 50px 0;
+  }
+
+  .info-producto{
+    display: block;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .info-detalles-container{
+    display: block;
+  }
+
+  .info-detalles-pirncipal{
+    padding: 0 20px;
+  }
+
+  .info-compra-cliente select{
+    max-width: 80%;
+  }
+
+  .container-cantidad-compra{
+    width: 100%;
+  }
+
+  .img-principal-container{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .img-detalles{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  
+
+  .img-none,
+  .info-none{
+    display: none;
+  }
+  
+}
+
+
+
+@media (max-width:520px){
+ 
+  .img-principal{
+    width: 400px;
+  }
+}
+
+@media (max-width:400px){
+ 
+  .img-principal{
+    width: 350px;
+  }
+}
+
+
+
+@media (min-width:1227px){
+  .img-detalles-duplicado,
+  .info-producto-duplicado{
+    display: none;
+  }
+
 }

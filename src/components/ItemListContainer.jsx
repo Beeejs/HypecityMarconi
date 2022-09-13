@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import { dataItem } from '../data';
-import '../stylesheets/ItemListContainer.css'
-import Presentacion from '../img/presentacion-prod.jpeg'
-import Item from './Item';
+import '../stylesheets/ItemListContainer.css';
+import Presentacion from '../img/presentacion-prod.jpeg';
+import Item from './Item.jsx';
 
 function ItemListContainer() {
 
@@ -12,10 +12,7 @@ function ItemListContainer() {
 
     (async()=>{
       const promesa = new Promise((res , rej) =>{
-        setTimeout(()=>{
-          res(dataItem);
-        },2000)
-        
+        res(dataItem);
       })
   
       try {
@@ -39,9 +36,12 @@ function ItemListContainer() {
         </div>
       <div className='container-productos'>
         {
-          items.map(item => {
-            return <Item key={item.id} products={item}/>
-          })
+          items.length ?
+            items.map(item => {
+              return <Item key={item.id} products={item}/>
+            })
+          :
+          <h1 className='loading'>Loading...</h1>
         }
       </div>
     </div>
