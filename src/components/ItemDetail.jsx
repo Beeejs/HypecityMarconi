@@ -1,14 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../stylesheets/ItemDetail.css';
 import ItemCount from './ItemCount.jsx';
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 function ItemDetail({ item }){
 
   const {name , img , price , category , imgDetalle} = item
+  const [qty , setQty] = useState(0)
+  const navigate =  useNavigate()
 
-  const agregarAlCarrtito = () =>{
-    alert(`Se agrego al carrito`)
+
+  const addCarr = quantity =>{
+    setQty(quantity)
+  }
+
+  const handleNavCar = () =>{
+    navigate('/carrito')
   }
 
   const cambioDeImg = e =>{
@@ -73,7 +80,9 @@ function ItemDetail({ item }){
           </div>
       
           <div className='container-cantidad-compra'>
-            <ItemCount stock={8} initial={1} onAdd={agregarAlCarrtito}/>
+            {//qty valor falsy == 0
+              qty ? <button className='finalizar-compra' onClick={handleNavCar}>FInalizar Compra</button> : <ItemCount stock={8} initial={1} onAdd={addCarr}/>
+            }
           </div>
         </div>
       </div>

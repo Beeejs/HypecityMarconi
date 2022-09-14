@@ -5,6 +5,7 @@ import ItemListContainer from './components/ItemListContainer.jsx';
 import ItemDetailContainer from './components/ItemDetailContainer.jsx';
 import CategoryContainer from './components/CategoryContainer';
 import Proximamente from './components/Proximamente';
+import Carrito from './components/Carrito';
 import {BrowserRouter,Routes,Route} from "react-router-dom";
 
 
@@ -19,6 +20,7 @@ function App() {
         <Route path='/details/:productId/:category-:productName' element={<ItemDetailContainer/>}/>
         <Route path='/category/:categoryId' element={<CategoryContainer/>}/>
         <Route path='/category/:categoryId/Proximamente' element={<Proximamente/>}/>
+        <Route path='/carrito' element={<Carrito/>}/>
       </Routes>
     </BrowserRouter>
  

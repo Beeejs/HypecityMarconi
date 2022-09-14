@@ -12,26 +12,26 @@ function Navbar(){
           <Link to='/'>Productos</Link>
           <i className='fa-solid fa-angle-down'></i>
           <ul className='nav-categorys'>
-            <li>
-              <Link to='/category/Hoodies'>
-                  Hoodies
-              </Link>
-            </li>
-            <li>
-              <Link to='/category/Remeras'>
+            <Link to='/category/Hoodies'>
+              <li>
+                    Hoodies
+              </li>
+            </Link>
+            <Link to='/category/Remeras'>
+              <li>
                   Remeras
-              </Link>
-            </li>
-            <li>
-              <Link to='/category/Pantalones/Proximamente'>
+              </li>
+            </Link>
+            <Link to='/category/Pantalones/Proximamente'>
+              <li>
                   Pantalones
-              </Link>
-            </li>
-            <li>
-              <Link to='/category/Shorts/Proximamente'>
+              </li>
+            </Link>
+            <Link to='/category/Shorts/Proximamente'>
+              <li>
                   Shorts
-              </Link>
-            </li>
+              </li>
+            </Link>
           </ul>
         </li>
         <li><Link to='/'>Contacto</Link></li>
