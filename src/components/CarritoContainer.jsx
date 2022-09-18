@@ -5,15 +5,23 @@ import Carrito from './Carrito';
 
 function CarritoContainer(){
 
-  const {cart} = useContext(Cart)
+  let {cart , clearCart} = useContext(Cart)
 
-  return( 
+  const voidCart = () =>{
+    clearCart()
+  }
+  return(
     <div className='container-principal-carrito'>
       {
-          cart.map(item => {
-            return <Carrito key={item.id} product={item}/>
-          })
+        cart.map(item => {
+          return <Carrito key={item.id} product={item}/>
+        })
       }
+
+      {
+       !cart.length ? <div className='container-aviso-vacio'><h1>El carrito esta vacio!</h1></div> : <div className='container-btnVaciar'><button onClick={voidCart}>Vaciar</button></div>
+      }
+
     </div>
   );
 }
