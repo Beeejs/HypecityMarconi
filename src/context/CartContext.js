@@ -21,12 +21,17 @@ function CartContext({ children }){
   }
 
   const removeItem = (id) =>{
-    cart.map(product => product.id === id ? product = {...cart} : null)
+    const newCart = cart.filter(item => item.id !== id);
+    setCart(newCart)
+  }
+
+  const clearCart = () =>{
+    setCart([])
   }
 
 
   return(
-    <Cart.Provider value={{cart , addItemCart , removeItem}}>
+    <Cart.Provider value={{cart , addItemCart , removeItem , clearCart}}>
       {children}
     </Cart.Provider>
   );
