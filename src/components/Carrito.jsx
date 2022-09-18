@@ -19,7 +19,7 @@ function Carrito({ product }){
       <h2>{'$'+price}</h2>
       <h3>{qty}</h3>
       <h2 className='total'>{'$'+price * qty}</h2>
-      <button onClick={() => deletePorduct(id)}>Delete</button>
+      <button className='btn-eliminar' onClick={() => deletePorduct(id)}><i className='fa-solid fa-trash-can'></i></button>
     </div>
   );
 }

@@ -19,7 +19,7 @@ function CarritoContainer(){
       }
 
       {
-       !cart.length ? <div className='container-aviso-vacio'><h1>El carrito esta vacio!</h1></div> : <div className='container-btnVaciar'><button onClick={voidCart}>Vaciar</button></div>
+       !cart.length ? <div className='container-aviso-vacio'><h1 className='msj-vacio'><i className='fa-solid fa-cart-arrow-down'></i>El carrito esta vacio<i className='fa-solid fa-cart-arrow-down'></i></h1></div> : <div className='container-btnVaciar'><button onClick={voidCart}>Vaciar carrito</button></div>
       }
 
     </div>
