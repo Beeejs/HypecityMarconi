@@ -1,13 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState ,  useContext } from 'react';
 import '../stylesheets/ItemDetail.css';
 import ItemCount from './ItemCount.jsx';
 import {Link, useNavigate} from "react-router-dom";
+import { Cart } from '../context/CartContext';
 
 function ItemDetail({ item }){
 
   const {name , img , price , category , imgDetalle} = item
   const [qty , setQty] = useState(0)
   const navigate =  useNavigate()
+  
+  const {addItemCart} = useContext(Cart)
 
 
   const addCarr = quantity =>{
@@ -15,6 +18,8 @@ function ItemDetail({ item }){
   }
 
   const handleNavCar = () =>{
+    const itemToAdd = {...item , qty}
+    addItemCart(itemToAdd)
     navigate('/carrito')
   }
 
