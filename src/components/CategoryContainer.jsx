@@ -1,14 +1,49 @@
-import { React } from 'react';
+import React , {useEffect , useState} from 'react';
 import { useParams } from 'react-router-dom';
-import { dataItem } from '../data.jsx';
 import CategoryItem from './CategoryItem.jsx';
 import '../stylesheets/CategoryItem.css'
 
+
+import {db} from './firebase/config'
+import { collection, query, where, getDocs } from "firebase/firestore";
 function CategoryContainer(){
 
   const params = useParams()
   const {categoryId} = params
+  const [items , setItems] = useState([])
 
+  useEffect(()=>{
+    const productsFirebase = [];
+
+    (async()=>{
+      const promesa = new Promise((res , rej) =>{
+        res(productsFirebase);
+      })
+  
+      try {
+        const q = categoryId
+            ? query(
+                collection(db, "products"),
+                where("category", "==", categoryId)
+            )
+            : null;
+
+        const querySnapshot = await getDocs(q);
+
+        querySnapshot.forEach((doc) => {
+          productsFirebase.push({id: doc.id, ...doc.data()})
+        });
+        
+        const res = await promesa;
+        setItems(res);
+      } 
+      catch (err) {
+        console.log(err);
+      }
+  
+    })()
+
+  },[categoryId])
   return(
     <>
       <ul className='container-li-category'>
@@ -17,10 +52,18 @@ function CategoryContainer(){
       </ul>
       <div className='container-productos'>
         {
-          dataItem.length ? 
-            dataItem.map(res => res.category === categoryId ? <CategoryItem key={res.id} item={res}/> : null)
+          items.length ? 
+            items.map(res => res.category === categoryId ? <CategoryItem key={res.id} item={res}/> : null)
           :
-          <h1 className='loading'>Loading...</h1>
+          <>
+            <div></div> 
+            <div className='container-loader'>
+              <div className='spinner-border' role='status'>
+              </div>
+              <span className='visually-visible'>Loading...</span>
+            </div>
+            <div></div> 
+          </>
         }
       </div>
     </>

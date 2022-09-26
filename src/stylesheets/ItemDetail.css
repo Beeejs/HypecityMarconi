@@ -19,6 +19,10 @@ li{
   font-weight: 500;
   margin: 0 3px;
 }
+a{
+  color: #000 !important;
+  text-decoration: none !important;
+}
 
 .li-inicio::after{
   content: '/';

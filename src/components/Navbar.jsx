@@ -1,6 +1,7 @@
 import React from 'react';
 import '../stylesheets/Navbar.css';
 import {Link} from "react-router-dom";
+import CartWidget from './CartWidget';
 
 function Navbar(){
 
@@ -35,7 +36,7 @@ function Navbar(){
           </ul>
         </li>
         <li><Link to='/'>Contacto</Link></li>
-        <li><i className='fa-solid fa-cart-shopping'></i><span className='cantidad-carrito'>0</span></li>
+        <CartWidget/>
       </ul>
     </nav>
   );

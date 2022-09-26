@@ -19,14 +19,32 @@
   margin: 0 250px;
 }
 
+
 /* Loading */
 
-.loading{
-  width: 100%;
-  font-size: 50px;
-  font-family: 'Kanit' , sans-serif;
-  color: #000;
+.container-loader{
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  padding: 10px 20px;
 }
+
+.spinner-border{
+ width: 100px !important;
+ height: 100px !important;
+ margin-top: 100px;
+ align-content: center !important;
+}
+
+.container-loader span{
+  font-size: 20px;
+  font-family: 'Kanit' , sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  color: red;
+  margin: 10px 0 50px 0;
+}
+
 
 
 

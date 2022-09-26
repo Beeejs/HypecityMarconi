@@ -1,21 +1,32 @@
 import React, { useEffect, useState } from 'react';
-import { dataItem } from '../data';
 import '../stylesheets/ItemListContainer.css';
 import Presentacion from '../img/presentacion-prod.jpeg';
 import Item from './Item.jsx';
 
+import {db} from './firebase/config'
+import { collection, query, getDocs } from "firebase/firestore";
+
 function ItemListContainer() {
 
   const [items , setItems] = useState([])
-
+  
   useEffect(()=>{
+    const productsFirebase = [];
 
     (async()=>{
       const promesa = new Promise((res , rej) =>{
-        res(dataItem);
+        res(productsFirebase);
       })
   
       try {
+        const q = query(collection(db, "products"))
+        /* 2do Realizar el llamado a firebase */
+        const querySnapshot = await getDocs(q);
+        /* 3ro Obtener el Snapshot con los datos crudos */
+        querySnapshot.forEach((doc) => {
+          productsFirebase.push({id: doc.id, ...doc.data()})
+        });
+        
         const res = await promesa;
         setItems(res);
       } 
@@ -41,7 +52,15 @@ function ItemListContainer() {
               return <Item key={item.id} products={item}/>
             })
           :
-          <h1 className='loading'>Loading...</h1>
+          <>
+          <div></div> 
+          <div className='container-loader'>
+            <div className='spinner-border' role='status'>
+            </div>
+            <span className='visually-visible'>Loading...</span>
+          </div>
+          <div></div> 
+          </>
         }
       </div>
     </div>

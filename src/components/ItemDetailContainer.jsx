@@ -1,19 +1,51 @@
-import { React } from 'react';
+import  React , {useEffect , useState} from 'react';
 import { useParams } from 'react-router-dom';
-import { dataItem } from '../data.jsx';
 import ItemDetail from './ItemDetail.jsx';
 
-function ItemDetailContainer(){
+/* FireBase */
+import {db} from './firebase/config'
+import { doc, getDoc } from "firebase/firestore";
 
+
+
+function ItemDetailContainer(){
   const params = useParams()
   const {productId} = params
 
-  let item = []
-  dataItem.filter(res => res.id === parseInt(productId) ? item = res : null)
-  
+  const [prodDetail , setProdDetail] = useState('')
+
+
+ 
+  useEffect(() =>{
+
+    const getProducts = async () =>{
+      
+      try{
+        const docRef = doc(db, "products", productId);
+        const docSnap = await getDoc(docRef);
+        setProdDetail(docSnap.data())
+      }
+      catch(err){
+        console.log(err)
+      }
+    } 
+    getProducts()
+
+  },[productId])
+
+
   return(
-    <ItemDetail key={item.id} item={item}/>
+    prodDetail.length === 0 ?  
+      <>
+      <div className='container-loader'>
+        <div className='spinner-border' role='status'>
+        </div>
+        <span className='visually-visible'>Loading...</span>
+      </div>
+      </> 
+      : <ItemDetail key={productId} item={prodDetail}/>
   );
+  
 }
 
 export default ItemDetailContainer
