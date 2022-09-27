@@ -14,7 +14,6 @@ function ItemDetailContainer(){
 
   const [prodDetail , setProdDetail] = useState('')
 
-
  
   useEffect(() =>{
 
@@ -23,7 +22,7 @@ function ItemDetailContainer(){
       try{
         const docRef = doc(db, "products", productId);
         const docSnap = await getDoc(docRef);
-        setProdDetail(docSnap.data())
+        setProdDetail({...docSnap.data() , id:productId})
       }
       catch(err){
         console.log(err)
