@@ -4,7 +4,7 @@ import CategoryItem from './CategoryItem.jsx';
 import '../stylesheets/CategoryItem.css'
 
 
-import {db} from './firebase/config'
+import {db} from '../firebase/config'
 import { collection, query, where, getDocs } from "firebase/firestore";
 function CategoryContainer(){
 

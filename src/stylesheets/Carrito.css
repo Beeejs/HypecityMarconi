@@ -78,20 +78,21 @@
 
 
 /* Btn Vaciar */
-.container-btnVaciar{
+.container-btn-footer{
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
   background-color: #fff;
+  font-size: 18px;
+  font-family:'Kanit', sans-serif;
   margin: 20px 0;
+  gap:50px;
 }
 
-.container-btnVaciar button{
+.btn-vaciar{
   width: 150px;
   height: auto;
-  font-size: 18px;
   font-weight: 700;
-  font-family:'Kanit', sans-serif;
   background-color: #000;
   color:#fff;
   padding: 3px ;
@@ -99,8 +100,24 @@
   transition: color .3s ease;
 }
 
-.container-btnVaciar button:hover{
+.btn-vaciar:hover{
   color: red;
+}
+
+.btn-confirm{
+  width: 200px;
+  height: auto;
+  font-weight: 700;
+  background-color: green;
+  color:#fff;
+  padding: 3px ;
+  cursor: pointer;
+  transition: color .3s ease , background-color .3s ease;
+}
+
+.btn-confirm:hover{
+  color: green;
+  background-color:transparent;
 }
 
 /* Mensaje carrito vacio */

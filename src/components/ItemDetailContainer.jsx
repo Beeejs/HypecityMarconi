@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import ItemDetail from './ItemDetail.jsx';
 
 /* FireBase */
-import {db} from './firebase/config'
+import {db} from '../firebase/config.js'
 import { doc, getDoc } from "firebase/firestore";
 
 
@@ -32,7 +32,7 @@ function ItemDetailContainer(){
 
   },[productId])
 
-
+  
   return(
     prodDetail.length === 0 ?  
       <>

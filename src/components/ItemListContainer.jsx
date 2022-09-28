@@ -3,7 +3,7 @@ import '../stylesheets/ItemListContainer.css';
 import Presentacion from '../img/presentacion-prod.jpeg';
 import Item from './Item.jsx';
 
-import {db} from './firebase/config'
+import {db} from '../firebase/config.js'
 import { collection, query, getDocs } from "firebase/firestore";
 
 function ItemListContainer() {

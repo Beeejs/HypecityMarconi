@@ -29,9 +29,14 @@ function CartContext({ children }){
     setCart([])
   }
 
+  const totalCart = () =>{
+    const total = cart.reduce((acc,product) => acc += (product.qty * product.price) , 0)
+    return total
+  }
+
 
   return(
-    <Cart.Provider value={{cart , addItemCart , removeItem , clearCart}}>
+    <Cart.Provider value={{cart , addItemCart , removeItem , clearCart , totalCart }}>
       {children}
     </Cart.Provider>
   );

@@ -1,15 +1,23 @@
 import React from 'react'
 import { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Cart } from '../context/CartContext';
 import Carrito from './Carrito';
 
 function CarritoContainer(){
 
-  let {cart , clearCart} = useContext(Cart)
+  let {cart , clearCart } = useContext(Cart)
+
+  const navigate = useNavigate()
 
   const voidCart = () =>{
     clearCart()
   }
+
+  const inputBuyerData = () =>{
+   navigate(`/finalizar-compra/user`)
+  }
+
   return(
     <div className='container-principal-carrito'>
       {
@@ -19,7 +27,19 @@ function CarritoContainer(){
       }
 
       {
-       !cart.length ? <div className='container-aviso-vacio'><h1 className='msj-vacio'><i className='fa-solid fa-cart-arrow-down'></i>El carrito esta vacio<i className='fa-solid fa-cart-arrow-down'></i></h1></div> : <div className='container-btnVaciar'><button onClick={voidCart}>Vaciar carrito</button></div>
+       !cart.length ?(
+        <div className='container-aviso-vacio'>
+          <h1 className='msj-vacio'><i className='fa-solid fa-cart-arrow-down'></i>El carrito esta vacio<i className='fa-solid fa-cart-arrow-down'></i></h1>
+        </div>
+       )
+       : (
+        <>
+        <div className='container-btn-footer'>
+          <button className='btn-vaciar' onClick={voidCart}>Vaciar carrito</button>
+          <button className='btn-confirm' onClick={inputBuyerData}>Confirmar compra</button>
+        </div>
+        </>
+       )
       }
 
     </div>
