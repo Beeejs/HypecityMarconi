@@ -36,7 +36,7 @@ function CarritoContainer(){
         <>
         <div className='container-btn-footer'>
           <button className='btn-vaciar' onClick={voidCart}>Vaciar carrito</button>
-          <button className='btn-confirm' onClick={inputBuyerData}>Confirmar compra</button>
+          <button className='btn-confirm' onClick={inputBuyerData}>Ir al CheckOut</button>
         </div>
         </>
        )

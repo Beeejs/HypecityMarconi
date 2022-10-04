@@ -10,6 +10,7 @@ import {BrowserRouter,Routes,Route} from "react-router-dom";
 import CartContext from './context/CartContext';
 import GenerateOrder from './components/GenerateOrder';
 import AdminView from './components/AdminView';
+import NotFound from './components/NotFound';
 /* import { useEffect } from 'react';
 import { guardadoAutomaticoBaseDeDatos } from './services/guardarProductos'; */
 
@@ -35,6 +36,7 @@ function App() {
           <Route path='/carrito' element={<CarritoContainer/>}/>
           <Route path='/finalizar-compra/user' element={<GenerateOrder/>}/>
           <Route path='/admin/1234' element={<AdminView/>}/>
+          <Route path='*' element={<NotFound/>}/>
         </Routes>
       </BrowserRouter>
     </CartContext>

@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 
 function CategoryItem({ item }){
 
-  const {name , price , img , id , category} = item
+  const {name , price , img , id , category , stock} = item
   
   const navigate = useNavigate()
   const HandleDetalle = () =>{
@@ -13,7 +13,16 @@ function CategoryItem({ item }){
   return(
       <div className='productos' onClick={HandleDetalle}>
         <div className='img-prod'>
-          <img src={`${img}`} alt={`Imagen ${name}`} />
+          {
+            stock === 0 ?(
+              <>
+                <span className='out-stock'>Sin stock</span>
+                <img src={`${img}`} alt={`Imagen ${name}`} />
+              </>
+            )
+            :
+            <img src={`${img}`} alt={`Imagen ${name}`} />
+          }
         </div>
         <div className='detalles'>
           <h1 className='name'>{name}</h1>

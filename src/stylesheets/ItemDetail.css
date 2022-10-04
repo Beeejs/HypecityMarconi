@@ -197,6 +197,23 @@ a{
 }
 
 
+/* Sin stock */
+.container-sinstock{
+  margin-top: 50px;
+  width: 100%;
+  text-align: center;
+}
+
+.p-sinstock{
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: 'Kanit', sans-serif;
+  background-color: rgba(246, 246, 246, 0.833);
+  border: 1px solid #000;
+}
+
+
 
 /* MediaQ */
 @media (max-width:1300px){

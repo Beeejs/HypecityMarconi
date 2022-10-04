@@ -6,7 +6,7 @@ import { Cart } from '../context/CartContext';
 
 function ItemDetail({ item }){
 
-  const {name , img , price , category , imgDetalle} = item
+  const {name , img , price , category , imgDetalle , stock} = item
   const [qty , setQty] = useState(0)
   const navigate =  useNavigate()
   
@@ -84,9 +84,18 @@ function ItemDetail({ item }){
             </select>
           </div>
       
-          <div className='container-cantidad-compra'>
+          <div className={stock === 0 ? 'container-sinstock' : 'container-cantidad-compra'}>
             {//qty valor falsy == 0
-              qty ? <button className='finalizar-compra' onClick={handleNavCar}>FInalizar Compra</button> : <ItemCount stock={8} initial={1} onAdd={addCarr}/>
+              stock === 0 ? (
+                <p className='p-sinstock'>SIN STOCK</p>
+              ):(
+                qty ? (
+                  <button className='finalizar-compra' onClick={handleNavCar}>FInalizar Compra</button>
+                  
+                )
+                : <ItemCount stock={stock} initial={1} onAdd={addCarr}/>
+              )
+
             }
           </div>
         </div>
