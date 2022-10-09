@@ -1,0 +1,42 @@
+/* Tipografia Kanit */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+/* Section lista products */
+.container-products-admin{
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  background-color: grey;
+  margin: 50px 0;
+}
+.container-products-admin span{
+  font-size: 16px;
+  font-family:'Kanit' , sans-serif;
+  font-weight: 200;
+}
+
+.container-products-admin h2{
+  font-size: 18px;
+  font-family:'Kanit' , sans-serif;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.container-products-admin h3{
+  font-size: 16px;
+  font-family:'Kanit' , sans-serif;
+  font-weight: 600;
+  margin-top: 8px;
+}
+.container-products-admin h4{
+  font-size: 16px;
+  font-family:'Kanit' , sans-serif;
+  font-weight: 600;
+  margin-bottom: 20px;
+  margin-top: 8px;
+}
+
+.container-img img{
+  width: 100px;
+  height: 100px;
+  margin-top: 20px;
+}

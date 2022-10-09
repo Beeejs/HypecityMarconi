@@ -1,5 +1,7 @@
 import  {React , useState} from 'react'
 import '../stylesheets/ItemCount.css'
+/* Sweet Alert */
+const Swal = require('sweetalert2')
 
 function ItemCount({ stock , initial , onAdd  }) {
 
@@ -9,7 +11,21 @@ function ItemCount({ stock , initial , onAdd  }) {
     if(count < stock){
       setCount(count + 1)
     }else{
-      alert('No hay mas stock!')
+      const Toast = Swal.mixin({
+        toast: true,
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer)
+          toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+      })
+      
+      Toast.fire({
+        icon: 'error',
+        title: 'No hay mas productos disponibles!'
+      })
     }
   }
 

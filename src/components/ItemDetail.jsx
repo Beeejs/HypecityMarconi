@@ -66,7 +66,7 @@ function ItemDetail({ item }){
       
       <div className='info-detalles-pirncipal'>
         <div className='info-detalles-container'>
-          <ul>
+          <ul className='info-ruta'>
             <li className='li-inicio'><Link to='/'>Incio</Link></li>
             <li className='li-category'><Link to={`/category/${category}`}>{category}</Link></li>
             <li className='li-name'>{name}</li>

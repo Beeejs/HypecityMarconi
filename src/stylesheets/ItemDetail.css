@@ -9,6 +9,11 @@
 }
 
 /* Ul detalles */
+.info-ruta{
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 ul{
   display: flex;
   list-style: none;

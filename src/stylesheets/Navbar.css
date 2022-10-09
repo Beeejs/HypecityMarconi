@@ -1,4 +1,5 @@
 /* Navbar Container */
+
 .navbar-container{
   font-family: 'Kanit', sans-serif;
   background-color: #000;
@@ -9,6 +10,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 .navbar-container li{
@@ -33,6 +36,7 @@
   display: none !important;
   transition: all .3s ease;
   text-align: left;
+  z-index: 3;
 }
 
 .nav-categorys li{
