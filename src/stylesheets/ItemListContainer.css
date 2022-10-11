@@ -21,7 +21,11 @@
 
 
 /* Loading */
-
+.container-productos-laoding{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .container-loader{
   display: grid;
   justify-content: center;

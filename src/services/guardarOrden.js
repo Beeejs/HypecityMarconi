@@ -1,6 +1,5 @@
 import { addDoc, collection, doc, getDoc, writeBatch } from "firebase/firestore"
 import {db} from '../firebase/config.js'
-import '../stylesheets/Footer.css'
 /* Sweet Alert */
 const Swal = require('sweetalert2')
 

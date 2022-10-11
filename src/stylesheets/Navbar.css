@@ -77,6 +77,14 @@
   font-size: 18px;
 }
 
+/* Btn mobile */
+.btn-navbar-mobile{
+  display: none;
+}
+
+.btn-navbar-mobile a{
+  color: #fff !important;
+}
 
 
 /* MediaQ */
@@ -89,6 +97,26 @@
   
   .navbar-container{
     display: none;
+  }
+
+  .btn-navbar-mobile{
+    display: unset;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    background-color: #000;
+    padding: 10px 0;
+  }
+
+  .btn-navbar-mobile button{
+    background-color: transparent;
+    border: 1px solid #fff;
+    margin: 0 20px !important;
+  }
+
+  .btn-navbar-mobile a{
+    margin: 0 20px;
   }
 
   .navbar{

@@ -1,11 +1,12 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext } from 'react'
+import useLocalStorage from '../customs/useLocalStorage'
 
 export const Cart = createContext(null)
 
 function CartContext({ children }){
-
-  const [cart , setCart] = useState([])
-
+  
+  let [cart , setCart] = useLocalStorage('carrito' , [])
+  
   const addItemCart = (item) =>{
     const addCart = [...cart,item]
     const boolean = cart.some(product => product.id === item.id)
@@ -36,7 +37,7 @@ function CartContext({ children }){
 
 
   return(
-    <Cart.Provider value={{cart , addItemCart , removeItem , clearCart , totalCart }}>
+    <Cart.Provider value={{cart , addItemCart , removeItem , clearCart , totalCart , setCart}}>
       {children}
     </Cart.Provider>
   );

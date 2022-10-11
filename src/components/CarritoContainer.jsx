@@ -1,5 +1,4 @@
-import React from 'react'
-import { useContext } from 'react';
+import React , { useContext }from 'react'
 import { useNavigate } from 'react-router-dom';
 import { Cart } from '../context/CartContext';
 import Carrito from './Carrito';
@@ -19,7 +18,7 @@ function CarritoContainer(){
   }
 
   return(
-    <div className='container-principal-carrito'>
+    <div className={cart.length ? 'container-principal-carrito' : ''}>
       {
         cart.map(item => {
           return <Carrito key={item.id} product={item}/>

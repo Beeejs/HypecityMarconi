@@ -1,6 +1,4 @@
 
-/* Poppins */
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 /* Kanit */
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap');
 
@@ -11,10 +9,12 @@
   justify-content: space-around;
   align-items: center;
   background-color:#000;
+  text-align: center;
+  text-transform: uppercase;
   padding: 0 50px;
   margin-top: 20px;
   color: #fff;
-  font-family:'Poppins', sans-serif;
+  font-family:'Kanit', sans-serif;
   border-radius: 20px;
 }
 
@@ -23,36 +23,18 @@
   background-color: #fff;
 }
 
+
 .container-carrito img{
   width: 200px;
 }
-.container-carrito h1{
-  width: 100%;
-  max-width: 60%;
-  text-align: center;
-  font-family:'Kanit', sans-serif;
-  text-transform: uppercase;
-}
-.container-carrito h2{
-  width: 100%;
-  max-width: 10%;
-  text-align: center;
-  font-family:'Kanit', sans-serif;
-  text-transform: uppercase;
-}
+
 .total{
-  width: 100%;
-  max-width: 10%;
-  text-align: center;
-  font-family:'Kanit', sans-serif;
-  text-transform: uppercase; 
   color: green;
 }
 .container-carrito h3{
   width: 100%;
   max-width: 10%;
   text-align: center;
-  font-family:'Kanit', sans-serif;
   text-transform: uppercase;
 }
 
@@ -61,7 +43,6 @@
   height: auto;
   font-size: 20px;
   font-weight: 700;
-  font-family:'Kanit', sans-serif;
   color:#fff;
   background-color: #000;
   border: none;
@@ -84,7 +65,6 @@
   align-items: flex-end;
   background-color: #fff;
   font-size: 18px;
-  font-family:'Kanit', sans-serif;
   margin: 20px 0;
   gap:50px;
 }
@@ -131,7 +111,6 @@
 
 .msj-vacio{
   font-size: 50px;
-  font-family: 'Kanit' , sans-serif;
   text-transform: uppercase;
   color: red;
 }
@@ -139,4 +118,74 @@
 .msj-vacio i{
   font-size: 40px;
   margin: 0 20px;
+}
+
+
+/* Media Q */
+
+@media (max-width:1190px){
+  .container-carrito{
+    padding: 0 10px;
+  }
+
+  .container-principal-carrito{
+    margin: 0 30px;
+  }
+
+}
+
+@media (max-width:900px){
+  .container-carrito{
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    gap: 10px 0;
+    width: 100%;
+    height: 100%;
+    background-color:#fff;
+    color: #000;
+
+  }
+  .container-principal-carrito{
+    background-color: #000;
+    padding:20px;
+  }
+
+  
+  .container-btn-footer{
+    margin-top: 60px;
+    background-color: #000;
+  }
+  .btn-vaciar{
+    border: 1px solid red;
+  }
+
+  .btn-eliminar{
+    width: fit-content;
+    color:#000;
+    background-color: transparent;
+  }
+}
+
+@media(max-width:740px){
+  .msj-vacio{
+    font-size: 35px;
+    text-transform: uppercase;
+    color: red;
+  }
+  .msj-vacio i {
+    font-size: 25px;
+    margin: 0;
+  }
+}
+
+@media(max-width:540px){
+  .msj-vacio{
+    font-size: 35px;
+    text-transform: uppercase;
+    color: red;
+  }
+  .msj-vacio i {
+    display: none;
+  }
 }

@@ -1,4 +1,4 @@
-import React , {useEffect , useState} from 'react';
+import React , {useContext, useEffect , useState} from 'react';
 import { useParams } from 'react-router-dom';
 import CategoryItem from './CategoryItem.jsx';
 import '../stylesheets/CategoryItem.css'
@@ -6,11 +6,13 @@ import '../stylesheets/CategoryItem.css'
 
 import {db} from '../firebase/config'
 import { collection, query, where, getDocs } from "firebase/firestore";
+import { Search } from '../context/SearchContext.js';
 function CategoryContainer(){
 
   const params = useParams()
   const {categoryId} = params
   const [items , setItems] = useState([])
+  const {itemFound} = useContext(Search)
 
   useEffect(()=>{
     const productsFirebase = [];
@@ -35,7 +37,8 @@ function CategoryContainer(){
         });
         
         const res = await promesa;
-        setItems(res);
+        itemFound ? setItems(itemFound) : setItems(res)
+        itemFound.length ? console.log('hay') : console.log('nohay')
       } 
       catch (err) {
         console.log(err);
@@ -43,26 +46,24 @@ function CategoryContainer(){
   
     })()
 
-  },[categoryId])
+  },[categoryId,itemFound])
   return(
     <>
       <ul className='container-li-category'>
         <li className='nav-inicio'>Incio</li>
         <li className='nav-category'>{categoryId}</li>
       </ul>
-      <div className='container-productos'>
+      <div className={items.length ? 'container-productos' : 'container-productos-loading'}>
         {
           items.length ? 
             items.map(res => res.category === categoryId ? <CategoryItem key={res.id} item={res}/> : null)
           :
           <>
-            <div></div> 
             <div className='container-loader'>
               <div className='spinner-border' role='status'>
               </div>
               <span className='visually-visible'>Loading...</span>
             </div>
-            <div></div> 
           </>
         }
       </div>

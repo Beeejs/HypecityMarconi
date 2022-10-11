@@ -106,4 +106,7 @@
   .buscador input{
     width: 240px;
   }
+  .info-header{
+    display: none;
+  }
 }

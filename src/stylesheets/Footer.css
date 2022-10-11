@@ -1,71 +1,79 @@
-/* Tipografia Kanit */
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
 /* Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 .container-footer{
-  padding: 150px;
-}
-
-.container-footer h2{
-  position: relative;
-  font-size: 50px;
-  font-weight: 900;
-  text-transform: uppercase;
-  font-family: 'Kanit' , sans-serif;
-  margin-bottom: 50px;
-}
-
-.container-footer h2::before{
-  content: '';
-  position: absolute;
-  width: 350px;
-  height: 5px;
-  bottom: 0;
-  left: 0;
-  background-color: grey;
-}
-
-
-.container-footer h2::after{
-  content: '';
-  position: absolute;
-  width: 250px;
-  height: 5px;
-  bottom: -10px;
-  left: 0;
-  background-color: grey;
-}
-
-.form-label{
-  font-size: 16px;
-  font-weight: 400;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #000;
   font-family:'Poppins', sans-serif;
-  margin: 10px 0;
+  color: #fff;
+  padding: 30px;
 }
 
-.form-control{
-  margin: 10px 0;
+/* Medios de pago y redes*/
+.container-redes,
+.container-img-medios{
+  display: flex;
+  justify-content: flex-start;
+  align-items:center;
+  flex-wrap: wrap;
 }
 
-.form-check{
-  font-size: 16px;
-  font-weight: 200;
-  font-family:'Kanit', sans-serif;
-  margin: 30px 0; 
-}
-
-.btn{
-  font-size: 16px;
+/* Medios de pago y envio*/
+.container-footer h3{
+  font-size:24px;
   font-weight: 500;
-  font-family:'Kanit', sans-serif;
-  color:green;
-  text-transform: uppercase;
-  background-color: transparent;
-  border: 1px solid #000;
+  color: #fff;
+  margin: 25px 0 10px 0;
+}
+
+.container-img-medios img{
+  width: 50px;
+  height: 26px;
+  margin-bottom: 7px;
 }
 
 
-.btn:hover{
-  background-color: green !important;
+
+/* Redes y Contacto */
+
+
+.container-redes{
+  margin: 0;
+}
+
+.container-redes i{
+  font-size: 25px;
+}
+
+.container-redes div{
+  margin-right: 20px;
+}
+
+.footer-contacto i{
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+.footer-contacto p{
+  margin: 0;
+}
+
+/* Media Q */
+@media (max-width:1070px){
+  .footer-medios,
+  .footer-redes-contacto{
+    width: 100%;
+  }
+}
+
+@media (max-width:500px){
+  .container-footer{
+    padding: 30px 15px;
+  }
+  .container-footer h3{
+    font-size:20px;
+  }
 }

@@ -40,3 +40,10 @@
   height: 100px;
   margin-top: 20px;
 }
+
+/* Media Q */
+@media (max-width:700px){
+  .container-products-admin h2{
+    font-size: 16px;
+  }
+}

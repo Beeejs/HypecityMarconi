@@ -1,22 +1,27 @@
 import React from 'react';
 import '../stylesheets/Header.css';
 import logo from '../img/hypecity-logo.jpeg';
-
+import { Link } from 'react-router-dom';
+import { Search } from '../context/SearchContext';
+import { useContext } from 'react';
 
 
 function Header() {
+
+  const {functionSearch} = useContext(Search)
+
   return (
     <div className='header-container'>
 
       <div className='buscador'>
-        <input type='text' placeholder='Buscar...'/>
+        <input type='text' placeholder='Buscar...' className='buscador-input' onKeyUp={functionSearch}/>
         <div className='icon-search'>
           <i className='fa-solid fa-magnifying-glass'></i>
         </div>
       </div>
 
       <div className='logo'>
-        <img src={logo} alt='Logo Hypecity' />
+        <Link to='/'><img src={logo} alt='Logo Hypecity' /></Link>
       </div>
 
       <div className='info-header'>

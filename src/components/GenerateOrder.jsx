@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import { Cart } from '../context/CartContext'
 import GuardarOrden from '../services/guardarOrden'
 import { useNavigate } from 'react-router-dom'
-import FormBootstrap from './FromBootstrap'
+import FormCompra from './FormCompra.jsx'
 
 const GenerateOrder = () => {
 
@@ -43,9 +43,9 @@ const GenerateOrder = () => {
 
 
   return (
-    <div className='container-footer'>
+    <div className='container-form'>
       <h2>Datos personales</h2>
-      <FormBootstrap handleBuy={sendOrderBuy}/>
+      <FormCompra handleBuy={sendOrderBuy}/>
     </div>
   )
 }

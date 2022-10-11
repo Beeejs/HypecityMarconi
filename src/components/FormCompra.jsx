@@ -4,8 +4,9 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
+import '../stylesheets/FormBootstrap.css'
 
-function FromBootstrap({handleBuy}) {
+function FormCompra({handleBuy}) {
   const [validated, setValidated] = useState(false);
 
   const handleSubmit = (event) => {
@@ -32,6 +33,9 @@ function FromBootstrap({handleBuy}) {
             type="text"
             id='name'
           />
+          <Form.Control.Feedback type="invalid">
+            Porfavor completa con un nombre válido.
+          </Form.Control.Feedback>
         </Form.Group>
         <Form.Group as={Col} md="6">
           <Form.Label>Email</Form.Label>
@@ -40,6 +44,9 @@ function FromBootstrap({handleBuy}) {
             type="email"
             id='email'
           />
+          <Form.Control.Feedback type="invalid">
+            Porfavor completa con un emial válido.
+          </Form.Control.Feedback>
         </Form.Group>
         <Form.Group as={Col} md="6" >
           <Form.Label>City</Form.Label>
@@ -84,4 +91,4 @@ function FromBootstrap({handleBuy}) {
   );
 }
 
-export default FromBootstrap
+export default FormCompra

@@ -1,15 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import '../stylesheets/ItemListContainer.css';
 import Presentacion from '../img/presentacion-prod.jpeg';
 import Item from './Item.jsx';
 
 import {db} from '../firebase/config.js'
 import { collection, query, getDocs } from "firebase/firestore";
+import { Search } from '../context/SearchContext';
 
 function ItemListContainer() {
 
   const [items , setItems] = useState([])
-  
+  const {itemFound} = useContext(Search)
+
   useEffect(()=>{
     const productsFirebase = [];
 
@@ -28,7 +30,7 @@ function ItemListContainer() {
         });
         
         const res = await promesa;
-        setItems(res);
+        itemFound ? setItems(itemFound) : setItems(res)
       } 
       catch (err) {
         console.log(err);
@@ -36,7 +38,7 @@ function ItemListContainer() {
   
     })()
 
-  },[])
+  },[itemFound])
 
 
 
@@ -45,7 +47,7 @@ function ItemListContainer() {
         <div className='container-img-prod'>
             <img src={Presentacion} alt='Imagen Presentacion Productos' />
         </div>
-      <div className='container-productos'>
+      <div className={items.length ? 'container-productos' : 'container-productos-loading'}>
         {
           items.length ?
             items.map(item => {
@@ -53,13 +55,11 @@ function ItemListContainer() {
             })
           :
           <>
-          <div></div> 
           <div className='container-loader'>
             <div className='spinner-border' role='status'>
             </div>
             <span className='visually-visible'>Loading...</span>
           </div>
-          <div></div> 
           </>
         }
       </div>

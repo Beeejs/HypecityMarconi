@@ -272,6 +272,10 @@ a{
   .info-none{
     display: none;
   }
+
+  .finalizar-compra{
+    width: 100%;
+  } 
   
 }
 
@@ -280,14 +284,7 @@ a{
 @media (max-width:520px){
  
   .img-principal{
-    width: 400px;
-  }
-}
-
-@media (max-width:400px){
- 
-  .img-principal{
-    width: 350px;
+    width: 100%;
   }
 }
 

@@ -1,0 +1,84 @@
+/* Offcanvas */
+.offcanvas{
+ max-width: 60% !important;
+}
+
+.offcanvas-header{
+  display: flex;
+  justify-content: flex-end !important;
+  color: #fff !important;
+}
+
+.offcanvas-body{
+ display: grid;
+ justify-content: center;
+ align-content: center;
+}
+
+
+
+/* Navbar ul */
+.navbar-container-btn ul{
+  padding: 0;
+  display: block;
+}
+
+.navbar-container-btn li{
+  padding: 20px;
+  margin: 40px 0;
+  background-color: #fff;
+}
+
+.navbar-container-btn a{
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 0 20px;
+  list-style: none;
+  cursor: pointer;
+}
+
+/* Accordion */
+.accordion-item{
+  border: none !important;
+}
+.accordion-button:not(.collapsed) {
+  background-color: #fff !important;
+  box-shadow: none !important;
+}
+
+.accordion-button:focus{
+  border-color: none !important;
+  box-shadow: none !important;
+}
+
+.accordion-title a{
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 20px;
+  list-style: none;
+  cursor: pointer; 
+}
+
+
+/* List Accordion */
+.nav-categorys-navBtn{
+  display: block;
+}
+
+
+.nav-categorys-navBtn a{
+  font-size: 18px;
+}
+
+.nav-categorys-navBtn li{
+  margin: 15px 0;
+}
+
+.nav-categorys-navBtn li::before{
+  content: '- ';
+}
+
+
+
