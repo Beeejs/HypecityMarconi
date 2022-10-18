@@ -1,6 +1,6 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
 import '../stylesheets/Item.css'
+import { useNavigate } from 'react-router-dom'
 
 
 function Item({products}) {

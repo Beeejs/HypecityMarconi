@@ -1,12 +1,14 @@
 import React , {useContext, useEffect , useState} from 'react';
-import { useParams } from 'react-router-dom';
-import CategoryItem from './CategoryItem.jsx';
 import '../stylesheets/CategoryItem.css'
-
-
+/* Router */
+import { useParams } from 'react-router-dom';
+/* Components */
+import CategoryItem from './CategoryItem.jsx';
+/* Firebase */
 import {db} from '../firebase/config'
 import { collection, query, where, getDocs } from "firebase/firestore";
 import { Search } from '../context/SearchContext.js';
+
 function CategoryContainer(){
 
   const params = useParams()
@@ -37,8 +39,16 @@ function CategoryContainer(){
         });
         
         const res = await promesa;
-        itemFound ? setItems(itemFound) : setItems(res)
-        itemFound.length ? console.log('hay') : console.log('nohay')
+        const resFilter = []
+        if(itemFound){
+          itemFound.map(res => res.category === categoryId ? resFilter.push(res) : null)
+          setItems(resFilter)
+        }else{
+          setItems(res)
+        }
+
+        
+
       } 
       catch (err) {
         console.log(err);

@@ -1,7 +1,7 @@
-import React from "react";
-import { useContext } from "react";
-import { Cart } from "../context/CartContext";
+import React , {useContext} from "react";
 import '../stylesheets/Carrito.css'
+import { Cart } from "../context/CartContext";
+
 
 function Carrito({ product }){
   const {name , img , price , qty , id} = product

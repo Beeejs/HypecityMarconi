@@ -5,6 +5,7 @@
 
 .main-panel-admin{
   display: flex;
+  margin: 0px 0px 450px 0px;
 }
 
 .main-panel-admin label{

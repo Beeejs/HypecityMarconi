@@ -1,7 +1,9 @@
-import React , {createContext} from 'react'
+import React , {createContext,useState} from 'react'
+/* Firebase */
 import { getDocs ,query ,collection,where } from 'firebase/firestore';
 import { db } from '../firebase/config';
-import { useState } from 'react';
+
+
 export const Search = createContext()
 
 const SearchContext = ({children}) => {
@@ -24,7 +26,7 @@ const SearchContext = ({children}) => {
       //No diferencia de minusculas y mayusculas
       let er = new RegExp(value , "i")
 
-      //test metodo para bsucar coincidencias , devuelve falso o verdadero
+      //test metodo para buscar coincidencias , devuelve falso o verdadero
       if(er.test(item.name)){
         const filtro = query(collection(db, "products"),where("name", "==", item.name))
         const listFiltro = await getDocs(filtro);

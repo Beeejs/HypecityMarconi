@@ -1,7 +1,20 @@
 /* Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+html{
+  min-height: 100%;
+  position: relative;
+}
+body{
+  margin: 0;
+  margin-bottom: 40px;
+}
+
 .container-footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: fit-content;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -9,7 +22,6 @@
   background-color: #000;
   font-family:'Poppins', sans-serif;
   color: #fff;
-  padding: 30px;
 }
 
 /* Medios de pago y redes*/
@@ -20,8 +32,13 @@
   align-items:center;
   flex-wrap: wrap;
 }
+.footer-redes-contacto,
+.footer-medios{
+  margin-left: 20px;
+}
 
 /* Medios de pago y envio*/
+
 .container-footer h3{
   font-size:24px;
   font-weight: 500;
@@ -67,13 +84,18 @@
   .footer-redes-contacto{
     width: 100%;
   }
+
+  .container-productos{
+    margin: 0px 0 450px 0;
+  }
 }
 
 @media (max-width:500px){
   .container-footer{
-    padding: 30px 15px;
+    padding: 0px 10px;
   }
   .container-footer h3{
     font-size:20px;
   }
 }
+

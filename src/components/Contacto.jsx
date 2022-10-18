@@ -2,7 +2,6 @@ import React from 'react'
 import FormContacto from './FormContacto.jsx'
 import '../stylesheets/FormBootstrap.css'
 function Contacto() {
-
   return (
  
     <div className='container-form'>

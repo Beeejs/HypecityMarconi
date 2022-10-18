@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
+import '../stylesheets/BtnNav.css'
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import {Link} from "react-router-dom";
 import AccordionBtn from './AccordionBootstrap';
-import '../stylesheets/BtnNav.css'
+/* Router */
+import {Link} from "react-router-dom";
 
 function OffCanvasExample() {
   const [show, setShow] = useState(false);

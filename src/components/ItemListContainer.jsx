@@ -1,10 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react';
 import '../stylesheets/ItemListContainer.css';
 import Presentacion from '../img/presentacion-prod.jpeg';
+/* Components */
 import Item from './Item.jsx';
-
+/* Firebase */
 import {db} from '../firebase/config.js'
 import { collection, query, getDocs } from "firebase/firestore";
+/* Context */
 import { Search } from '../context/SearchContext';
 
 function ItemListContainer() {
@@ -22,9 +24,8 @@ function ItemListContainer() {
   
       try {
         const q = query(collection(db, "products"))
-        /* 2do Realizar el llamado a firebase */
         const querySnapshot = await getDocs(q);
-        /* 3ro Obtener el Snapshot con los datos crudos */
+
         querySnapshot.forEach((doc) => {
           productsFirebase.push({id: doc.id, ...doc.data()})
         });

@@ -5,6 +5,7 @@
 
 .container-form{
   padding: 150px;
+  margin: 0px 0px 250px 0px;
 }
 
 .container-form h2{
@@ -78,8 +79,16 @@
 
 
 /* Media Q */
+
+@media (max-width: 1070px){
+  
+  .container-form{
+    margin: 0px 0px 450px 0px;
+  }
+
+}
 @media (max-width: 750px){
-    
+  
   .container-form{
     padding: 50px;
   }

@@ -1,6 +1,8 @@
 import React from 'react';
 import '../stylesheets/Navbar.css';
+/* Router */
 import {Link} from "react-router-dom";
+/* Components */
 import CartWidget from './CartWidget';
 import BtnNavbar from './BtnNavBootstrap';
 

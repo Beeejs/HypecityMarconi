@@ -1,26 +1,28 @@
 import React, { useState } from 'react';
+/* Styles */
+import '../stylesheets/FormBootstrap.css'
+/* Bootstrap */
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
-import '../stylesheets/FormBootstrap.css'
+/* Emailjs */
 import emailjs from '@emailjs/browser'
 /* Sweet Alert */
 const Swal = require('sweetalert2')
 
 function FormContacto() {
   const [validated, setValidated] = useState(false);
-
+  
   const handleSubmit = (event) => {
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
       event.preventDefault();
       event.stopPropagation();
-      console.log('No se valido!')
     }else{
       event.preventDefault();
-      emailjs.sendForm('service_toqsj6n','template_9ery90f',event.currentTarget,'5NnJQMvLuPZ8UJTHv')//la key en archivo .env
+      emailjs.sendForm('service_toqsj6n','template_9ery90f',event.currentTarget,process.env.REACT_APP_EMAIL_JS)//la key en archivo .env
       .then(() => {
         const Toast = Swal.mixin({
           toast: true,

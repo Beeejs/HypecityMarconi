@@ -1,3 +1,4 @@
+/* Firebase */
 import { addDoc, collection, doc, getDoc, writeBatch } from "firebase/firestore"
 import {db} from '../firebase/config.js'
 /* Sweet Alert */

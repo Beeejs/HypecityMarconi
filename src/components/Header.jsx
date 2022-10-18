@@ -1,9 +1,8 @@
-import React from 'react';
+import React , {useContext}from 'react';
 import '../stylesheets/Header.css';
 import logo from '../img/hypecity-logo.jpeg';
 import { Link } from 'react-router-dom';
 import { Search } from '../context/SearchContext';
-import { useContext } from 'react';
 
 
 function Header() {

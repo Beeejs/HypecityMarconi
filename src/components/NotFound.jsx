@@ -1,5 +1,6 @@
 import React from 'react'
 import '../stylesheets/Proximamente.css'
+
 const NotFound = () => {
   return (
     <div className='container-prox'>

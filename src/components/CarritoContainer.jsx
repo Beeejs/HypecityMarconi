@@ -1,6 +1,7 @@
 import React , { useContext }from 'react'
 import { useNavigate } from 'react-router-dom';
 import { Cart } from '../context/CartContext';
+/* Components */
 import Carrito from './Carrito';
 
 function CarritoContainer(){

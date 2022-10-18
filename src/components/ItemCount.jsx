@@ -1,4 +1,4 @@
-import  {React , useState} from 'react'
+import  React , {useState} from 'react'
 import '../stylesheets/ItemCount.css'
 /* Sweet Alert */
 const Swal = require('sweetalert2')

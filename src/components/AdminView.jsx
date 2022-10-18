@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
-import { useEffect } from 'react'
+import React, { useState,useEffect} from 'react'
+/* Styles */
+import '../stylesheets/AdminView.css'
+/* Import Functions */
 import {CrearProductEnBaseDeDatos, DeleteCamposEnBaseDeDatos, DeleteProductEnBaseDeDatos, ModificarProductEnBaseDeDatos, ObtenerProductEnBaseDeDatos} from '../services/adminBaseDatos'
 import GetProductsAdmin from './GetProductsAdmin'
-import '../stylesheets/AdminView.css'
 /* React Bootstrap */
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';

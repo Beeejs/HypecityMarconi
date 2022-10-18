@@ -1,4 +1,5 @@
 import React, { createContext } from 'react'
+/* Custom Hook */
 import useLocalStorage from '../customs/useLocalStorage'
 
 export const Cart = createContext(null)
