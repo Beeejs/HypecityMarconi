@@ -5,7 +5,7 @@ function AccordionBtn() {
   return (
     <Accordion defaultActiveKey="0">
       <Accordion.Item eventKey="0">
-        <Accordion.Header className='accordion-title'><Link to='/'>Productos</Link></Accordion.Header>
+        <Accordion.Header className='accordion-title'>Productos</Accordion.Header>
         <Accordion.Body>
           <ul className='nav-categorys-navBtn'>
             <Link to='/category/Hoodies'>

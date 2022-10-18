@@ -6,6 +6,7 @@
   justify-content: center;
   flex-wrap: wrap;
   padding: 100px 0;
+  margin: 0px 0px 250px 0px;
 }
 
 /* Ul detalles */
@@ -277,6 +278,13 @@ a{
     width: 100%;
   } 
   
+}
+
+@media (max-width:1070px){
+ 
+  .contenedor-detalles{
+    margin: 0px 0px 450px 0px;
+  }
 }
 
 

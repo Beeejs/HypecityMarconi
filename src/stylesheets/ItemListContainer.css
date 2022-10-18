@@ -66,6 +66,23 @@
   }
 }
 
+@media (max-width:1070px){
+  .container-loader{
+    margin: 0px 0px 500px 0px;
+  }
+
+  
+  .spinner-border{
+    width: 80px !important;
+    height: 80px !important;
+  }
+
+  .container-loader span{
+    font-size: 18px;
+  }
+  
+}
+
 @media (max-width: 620px){
   .container-productos{
     grid-template-columns: repeat(2,1fr);

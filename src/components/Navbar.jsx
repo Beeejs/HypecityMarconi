@@ -18,7 +18,7 @@ function Navbar(){
         <ul>
           <li><Link to='/'>Inicio</Link></li>
           <li className='list-products'>
-            <Link to='/'>Productos</Link>
+            Productos
             <i className='fa-solid fa-angle-down'></i>
             <ul className='nav-categorys'>
               <Link to='/category/Hoodies'>
